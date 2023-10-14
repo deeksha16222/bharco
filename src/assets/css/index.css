@@ -1,0 +1,420 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/futura/futur.ttf') format('truetype');
+  /* font-weight: normal;
+  font-style: normal; */
+}
+* {
+  font-family: "futura", sans-serif;
+}
+/*colors*/
+.bg-primary {
+  background-color: #156f5b;
+}
+.text-primary {
+  color: #156f5b;
+}
+.font-futura{
+  font-family: "futura", sans-serif;
+}
+.bg-light-green{
+    background-color: #f2fcf5;
+}
+.text-secondary {
+  color: #255abb;
+}
+.font-family-seconday {
+  font-family: "Cabin", sans-serif;
+}
+/* Custom scrollbar for webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 4px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #156f5b; /* Set the color of the thumb (scrollbar handle) */
+  border-radius: 4px; /* Set the border radius of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #66bc8c; /* Set the color of the thumb on hover */
+}
+
+/* Custom scrollbar for Firefox */
+/* Note: scrollbar-width property is not supported in all browsers */
+/* You can use @supports rule to check for scrollbar-width support */
+@supports (scrollbar-width: thin) {
+  .about-us {
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+  }
+
+  .about-us::-webkit-scrollbar {
+    width: 4px; /* Set the width of the scrollbar for webkit-based browsers */
+  }
+
+  .about-us::-webkit-scrollbar-thumb {
+    background-color: #156f5b; /* Set the color of the thumb (scrollbar handle) for webkit-based browsers */
+    border-radius: 4px; /* Set the border radius of the thumb for webkit-based browsers */
+  }
+
+  .about-us::-webkit-scrollbar-thumb:hover {
+    background-color: #66bc8c; /* Set the color of the thumb on hover for webkit-based browsers */
+  }
+}
+/*logo*/
+.logo {
+  width: 40%;
+  /* height: auto; */
+}
+/*nav*/
+nav a:hover,
+nav a.active {
+  background-color: #66bc8c;
+}
+
+nav a {
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  font-size: 16px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/*home page*/
+/* 
+.home {
+  margin-top: 70px;
+}
+.right-blk {
+  height: 100%;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.right-blk h2 {
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: "futura", sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.right-blk p {
+  color: black;
+  font-family: "futura", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px;
+  background-color: #f2fcf5;
+  margin-top: 30px;
+}
+.home-slider-img {
+  margin: auto;
+  width: 485px;
+}  */
+
+.carousel{
+  min-height: 400px;
+  max-height: 400px;
+}
+/*about us*/
+.about-us .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+.about-us .content {
+  font-size: 18px;
+}
+.about-us .card-wrap {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  scrollbar-width: thin;
+  overflow-x: auto;
+  max-width: 800px;
+  padding-bottom: 20px;
+}
+.about-us .card {
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-bottom: 20px;
+}
+.about-us .card:hover {
+  box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.2);
+}
+.about-us .card > img {
+  min-width: 200px;
+  width: 100%;
+  /* object-fit: cover; */
+  object-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 250px;
+}
+.about-us .card .content {
+  padding: 20px;
+  width: 250px;
+}
+.about-us .card:not(:last-child) {
+  margin-right: 10px;
+}
+.about-us .icons .fa-twitter {
+  color: #2ed2e8;
+  font-size: 32px;
+}
+.about-us .icons .fa-linkedin-square {
+  color: #255abb;
+  font-size: 32px;
+}
+/*how-it-works*/
+.how-it-works-point-img{
+  max-width: 428px;
+}
+.how-it-works-wrap img{
+  max-width: 600px;
+  max-height: 405px;
+}
+/*footer*/
+.footer {
+  padding-top: 20px;
+  color: white;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  position: relative;
+}
+.footer-logo > img {
+  width: 120px;
+  height: auto;
+}
+.footer-logo {
+  margin-right: 40px;
+}
+.footer-block-container {
+  /* Center the sub-blocks in the footer container */
+  display: flex;
+  justify-content: center;
+}
+
+.footer-block {
+  /* Add some spacing between the sub-blocks */
+  margin-right: 20px;
+}
+
+.footer-logo {
+  /* Optional: Adjust the size of the logo */
+  max-width: 100px;
+}
+
+.footer-block ul {
+  /* Optional: Remove default list styles */
+  list-style: none;
+  padding: 0;
+}
+
+.footer-block li {
+  /* Optional: Add some spacing between the list items */
+  margin-bottom: 8px;
+}
+
+/* Add underline on hover for the links */
+.footer-block a:hover {
+  text-decoration: underline;
+}
+.footer-block-container {
+  /* Center the sub-blocks */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-block {
+  /* Optional: Adjust the size of the sub-blocks if necessary */
+  width: 200px;
+}
+
+.footer-logo {
+  /* Optional: Adjust the size of the logo */
+  max-width: 100px;
+}
+
+.footer-block ul {
+  /* Optional: Remove default list styles */
+  list-style: none;
+  padding: 0;
+}
+
+.footer-block li {
+  /* Optional: Add some spacing between the list items */
+  margin-bottom: 8px;
+}
+
+/* Add underline on hover for the links */
+.footer-block a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Left align the text within the sub-blocks */
+.footer-block ul {
+  text-align: left;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 991px) {
+  nav a {
+    font-size: 14px;
+  }
+  .custom-container {
+    padding: 0 30px;
+  }
+  /*footer*/
+  .footer-logo {
+    margin-right: 0px;
+  }
+  /*home page*/
+  /* .right-blk h2 {
+    font-size: 26px;
+  }
+  .right-blk {
+    padding: 10px;
+  }
+  .right-blk p {
+    font-size: 16px;
+  } */
+  /*about-us*/
+  .about-us .card-wrap {
+    max-width: 700px;
+  }
+}
+@media (max-width: 767px) {
+  /* Adjust styles for screens with a maximum width of 768px (e.g., tablets and mobile devices) */
+
+  /* Hide the nav-links div initially */
+  #nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1f7c3ef5;
+    z-index: 9999;
+    transition: left 0.3s ease;
+  }
+
+  /* Show the nav-links div when isMenuOpen is true */
+  #navbar-toggle.active + #nav-links {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+  }
+  nav a:hover,
+  nav a.active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  /* Add some spacing between the links when displayed as a column */
+  #navbar-toggle.active + #nav-links > .p-2 {
+    margin-top: 8px;
+  }
+
+  /* Style for the cross (close) button */
+  .cross-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    z-index: 999999;
+  }
+  .about-us .heading {
+    font-size: 24px;
+  }
+  /* .right-blk {
+    margin-top: 100px;
+  } */
+  /* .home {
+    height: 100vh;
+  } */
+  .about-us .card-wrap {
+    flex-direction: column;
+    max-width: none;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .about-us .card {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .footer-block-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer-block-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-block {
+    margin-right: 0;
+    padding-top: 10px;
+    /* margin-bottom: 20px; */
+  }
+
+  /*footer*/
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .footer-logo {
+    max-width: none;
+  }
+  .footer-logo.footer-block::after {
+    /* z-index: -1; */
+  }
+  .footer-block-container{
+    gap: 0px;
+  }
+  .footer-block::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    /* bottom: -10px; */
+    /* left: 10px; */
+    /* right: 10px; */
+    width: 100%;
+    height: 1px;
+    background-color: #d9d5d5a1;
+    z-index: 1;
+  }
+  .footer-block:last-of-type::after {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  /*home*/
+  /* .right-blk p {
+    font-size: 14px;
+  } */
+  /*about-us*/
+  .about-us > div {
+    padding-top: 3rem;
+  }
+  .about-us .content {
+    width: 90%;
+  }
+  /* .right-blk {
+    margin-top: 170px;
+  } */
+}
